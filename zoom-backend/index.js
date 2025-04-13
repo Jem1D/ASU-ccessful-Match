@@ -11,7 +11,7 @@ const bcrypt = require('bcrypt');
 
 const app = express();
 const PORT = 3007;
-
+app.use(express.json()); 
 const cors = require('cors');
 
 app.use(cors({
