@@ -40,13 +40,13 @@ const Login: React.FC = () => {
 
   const handleDemoLogin = async () => {
     // Set the demo credentials
-    setEmail('alex.johnson@asu.edu');
-    setPassword('password');
+    setEmail('jemil@gmail.com');
+    setPassword('Test@123');
     
     // Automatically submit the form with these credentials
     setIsLoading(true);
     try {
-      await login('alex.johnson@asu.edu', 'password');
+      await login('jemil@gmail.com', 'Test@123');
       toast.success('Successfully logged in with demo account!');
       navigate('/dashboard');
     } catch (error) {
