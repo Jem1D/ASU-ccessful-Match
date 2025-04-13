@@ -15,7 +15,7 @@ const PORT = 3007;
 const cors = require('cors');
 
 app.use(cors({
-  origin: 'http://localhost:8080', // replace with your React frontend URL
+  origin: true, // replace with your React frontend URL
   credentials: true               // allows cookies & session headers
 }));
 app.use(express.json());
