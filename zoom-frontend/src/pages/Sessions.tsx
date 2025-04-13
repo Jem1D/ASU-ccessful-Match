@@ -19,7 +19,7 @@ const Sessions: React.FC = () => {
   useEffect(() => {
     const fetchSessions = async () => {
       try {
-        const response = await fetch('http://localhost:3007/api/sessions/all');
+        const response = await fetch('https://asu-ccessful-match.onrender.com/api/sessions/all');
         const data = await response.json();
 
         // Convert raw API data to our Session[] shape

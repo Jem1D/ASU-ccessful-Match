@@ -89,7 +89,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const login = async (email: string, password: string): Promise<User> => {
     try {
-      const response = await fetch('http://localhost:3007/api/login', {
+      const response = await fetch('https://asu-ccessful-match.onrender.com/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -165,7 +165,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const signup = async (email: string, password: string, confirmPassword: string, profileData?: any): Promise<User> => {
     try {
       // Step 1: Create account with email and password
-      const accountResponse = await fetch('http://localhost:3007/api/account', {
+      const accountResponse = await fetch('https://asu-ccessful-match.onrender.com/api/account', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -198,7 +198,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         year: profileData?.year || ''
       };
 
-      const profileResponse = await fetch('http://localhost:3007/api/profile', {
+      const profileResponse = await fetch('https://asu-ccessful-match.onrender.com/api/profile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -245,7 +245,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const logout = async (): Promise<void> => {
     try {
-      await fetch('http://localhost:3007/api/logout', {
+      await fetch('https://asu-ccessful-match.onrender.com/api/logout', {
         method: 'POST',
         credentials: 'include'
       });
@@ -276,7 +276,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         is_mentor: false
       };
       
-      fetch('http://localhost:3007/api/profile', {
+      fetch('https://asu-ccessful-match.onrender.com/api/profile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

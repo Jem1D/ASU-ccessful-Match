@@ -44,7 +44,7 @@ export const createMeeting = async (meetingData: MeetingData): Promise<MeetingRe
   console.log("Creating meeting with data:", meetingData);
 
   // Step 1: Create Zoom meeting
-  const response = await fetch('http://localhost:3007/api/meetings', {
+  const response = await fetch('https://asu-ccessful-match.onrender.com/api/meetings', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ export const createMeeting = async (meetingData: MeetingData): Promise<MeetingRe
     }
   };
 
-  const sessionRes = await fetch('http://localhost:3007/api/sessions', {
+  const sessionRes = await fetch('https://asu-ccessful-match.onrender.com/api/sessions', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

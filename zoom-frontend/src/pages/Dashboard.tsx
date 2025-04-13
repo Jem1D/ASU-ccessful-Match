@@ -128,7 +128,7 @@ const Dashboard: React.FC = () => {
   useEffect(() => {
     const fetchSubjects = async () => {
       try {
-        const response = await axios.get("http://localhost:3007/api/dropdowns/subject");
+        const response = await axios.get("https://asu-ccessful-match.onrender.com/api/dropdowns/subject");
         const formattedSubjects = response.data.map((subject, index) => ({
           id: `subject-${index}`,
           subjectCode: subject.subjectCode,
