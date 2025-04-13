@@ -14,20 +14,11 @@ const PORT = 3007;
 
 const cors = require('cors');
 
-const allowedOrigins = [
-  'https://asu-ccessful-match-1.onrender.com',
-  'http://localhost:8080'
-];
-
 app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    }
-    return callback(new Error('Not allowed by CORS'));
-  },
-  credentials: true
+  origin: true,         // reflect request origin (allows all)
+  credentials: true     // allows cookies, sessions, etc.
 }));
+
 
 // app.use('/api', matchRouter);
 
